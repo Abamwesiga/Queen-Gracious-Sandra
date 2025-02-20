@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive VIP Experience</title>
+    <style>
+        :root {
+            --primary-color: #1DA1F2;
+            --background-dark: #000000;
+            --background-light: #ffffff;
+            --text-dark: #ffffff;
+            --text-light: #000000;
+            --card-dark: #16181C;
+            --card-light: #F5F8FA;
+            --border-color: #2F3336;
+            --hover-dark: #1C1F23;
+            --hover-light: #E8F5FE;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 40px;
+            padding: 2rem;
+        }
+
+        .service-details {
+            background: var(--card-dark);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .service-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 16px;
+            margin: 2rem auto;
+            border: 2px solid var(--primary-color);
+        }
+
+        .price-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            display: inline-block;
+        }
+
+        .cta-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 1rem 0;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: #25D366;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+                margin-top: 60px;
+            }
+            
+            .service-details {
+                padding: 1rem;
+            }
+        }
+        .whatsapp-video-icon {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-video-icon:hover {
+    transform: scale(1.1) rotate(-10deg);
+    background: #128C7E;
+}
+    </style>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYKFB1BGKC"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CYKFB1BGKC');
+      </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1>Queen Gracious Sandra</h1>
+            <a href="index.html" class="back-link">Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="service-details">
+            <h1>Exclusive VIP Experience</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670146.png" 
+                 alt="VIP Experience" 
+                 class="service-image">
+            
+            <div class="price-tag">₦30,000 per session</div>
+
+            <h2>Premium Service Features</h2>
+            <p>Indulge in our most exclusive VIP video experience with Queen Gracious Sandra, featuring:</p>
+            <ul style="list-style: none; padding: 1rem 0;">
+                <li>✔ 90-minute premium session</li>
+                <li>✔ 24/7 priority scheduling</li>
+                <li>✔ 4K Ultra HD video quality</li>
+                <li>✔ Complete confidentiality guarantee</li>
+                <li>✔ Custom experience design</li>
+                <li>✔ Dedicated support team</li>
+                <li>✔ Personalized gift package</li>
+            </ul>
+
+            <a href="https://wa.me/+2349168013283?text=I'm%20interested%20in%20the%20Exclusive%20VIP%20Experience%20(%E2%82%A630,000)" 
+               class="cta-button"
+               target="_blank">
+                Book VIP Experience via WhatsApp
+            </a>
+
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I'm Queen Gracious Sandra providing private adult services, I'm here if any one is ready to connect with me.">
+    <meta name="keywords" content="I'm Queen Gracious Sandra, a friendly and professional companion who values meaningful connections. Whether you're looking for a chat, a laugh, or a personalized experience, I also provide private business services.">
+    <meta name="Abba" content="Queen Gracious Sandra">
+    <meta property="og:title" content="Welcome to My Space">
+    <link rel="icon" href="https://pbs.twimg.com/media/GkRC-PebAAUUaXy?format=jpg&name=900x900" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Queen Gracious Sandra</title>
+    <style>
+        :root {
+            --primary-color: #1DA1F2;
+            --background-dark: #000000;
+            --background-light: #ffffff;
+            --text-dark: #ffffff;
+            --text-light: #000000;
+            --card-dark: #16181C;
+            --card-light: #F5F8FA;
+            --border-color: #2F3336;
+            --hover-dark: #1C1F23;
+            --hover-light: #E8F5FE;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        body.light-mode {
+            background-color: var(--background-light);
+            color: var(--text-light);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--card-dark);
+                width: 100%;
+                text-align: center;
+                padding: 2rem;
+                transition: 0.3s;
+                border-left: 1px solid var(--border-color);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 40px;
+            padding: 2rem;
+        }
+
+        .section {
+            background: var(--card-dark);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            margin: 0 auto 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: var(--card-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            background: var(--hover-dark);
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .learn-more-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .testimonial-slider {
+            background: var(--card-dark);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            background: var(--card-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        button {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: #25D366;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--card-dark);
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            z-index: 999;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 3rem;
+        }
+    </style>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYKFB1BGKC"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CYKFB1BGKC');
+      </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <h3>Queen Gracious Sandra</h3>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="nav-links">
+                <a href="#home" onclick="closeMenu()">Home</a>
+                <a href="#about" onclick="closeMenu()">About</a>
+                <a href="#services" onclick="closeMenu()">Services</a>
+                <a href="#testimonials" onclick="closeMenu()">Testimonials</a>
+                <a href="#contact" onclick="closeMenu()">Contact</a>
+                <a href="privacy policy.html">Privacy</a>
+                <a href="terms of service.html">Terms</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="profile-header">
+                <img src="https://pbs.twimg.com/media/GkRC-PebAAUUaXy?format=jpg&name=900x900" 
+                     alt="Profile Picture" 
+                     class="profile-image">
+                <h1>Welcome to My Space</h1>
+                <p>Let's connect and create unforgettable moments together.</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hi there! I'm Queen Gracious Sandra, a friendly and professional companion who values meaningful connections. Whether you're looking for a chat, a laugh, or a personalized experience, I'm here to make it special. Let's create memories together!</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <h2>Services & Pricing</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Basic Video Call</h3>
+                    <p>Personalized video experience tailored for you</p>
+                    <a href="basic video call.html" class="learn-more-btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <h3>Premium Video Call</h3>
+                    <p>Extended exclusive video sessions</p>
+                    <a href="premium video call.html" class="learn-more-btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <h3>VIP Experience</h3>
+                    <p>Premium personalized interactions</p>
+                    <a href="exclusive vip experience.html" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section">
+            <h2>Testimonials</h2>
+            <div class="testimonial-slider">
+                <p id="testimonial">"An amazing experience! Highly recommended." - Happy Client</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <form id="contactForm" class="contact-form" onsubmit="return submitForm(event)">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" id="name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+                <p id="contactMessage"></p>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Queen Gracious Sandra. All rights reserved.</p>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('change');
+        }
+
+        function closeMenu() {
+            document.querySelector('.nav-links').classList.remove('active');
+            document.querySelector('.hamburger').classList.remove('change');
+        }
+
+        // Form Submission
+        function submitForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+            const whatsappUrl = `https://wa.me/+2349168013283?text=${whatsappMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+            document.getElementById('contactMessage').textContent = 'Redirecting to WhatsApp...';
+            document.getElementById('contactForm').reset();
+            return false;
+        }
+
+        // Testimonial Rotator
+        const testimonials = [
+            "“An amazing experience! Highly recommended.” – Happy Client",
+            "“Friendly, professional, and unforgettable!” – Satisfied User",
+            "“The best connection I've ever had.” – Anonymous"
+        ];
+        let testimonialIndex = 0;
+        setInterval(() => {
+            document.getElementById('testimonial').textContent = testimonials[testimonialIndex];
+            testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+        }, 5000);
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
